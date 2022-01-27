@@ -17,6 +17,12 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+
 @ExtendWith(TestReporterExtensions.class)
 public class CalculatorTest {
     private BasicOperations basic;
@@ -71,9 +77,10 @@ public class CalculatorTest {
         //GIVEN
 
         //WHEN
-        long result = basic.add(-2, -4);
+        Long result = basic.add(-2, -4);
         //THEN
-        System.out.println(result);
+        assertEquals(-6L,result);
+        assertTrue(result.equals(-6L));
     }
 
     @Test
@@ -83,7 +90,10 @@ public class CalculatorTest {
         //WHEN
         long result = basic.add(Integer.MAX_VALUE, 1);
         //THEN
-        System.out.println(result);
+       assertThat(result,is(Integer.MAX_VALUE+ 1L));
+       assertThat(result,greaterThan(0L));
+       assertThat(result,notNullValue());
+
     }
 
     @ParameterizedTest
@@ -127,7 +137,8 @@ public class CalculatorTest {
         //WHEN
         long result = basic.multiply(-2, -4);
         //THEN
-        LOGGER.info(result);
+        assertEquals(8L,result);
+       // assertTrue();
     }
 
     @Test

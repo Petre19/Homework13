@@ -2168,3 +2168,62 @@ finishing testCalculatorIT/shouldMultiplyWithGiven0Number()
 2022-01-26 17:22:54,430 INFO c.e.c.CalculatorIT [main] 2147483647
 2022-01-26 17:22:54,430 INFO c.e.e.TestReporterExtensions [main] 
 finishing testCalculatorIT/shouldMultiplyBigNumbers() 
+2022-01-27 09:53:25,805 INFO c.e.e.TestReporterExtensions [main] 
+ starting testCalculatorTest/shouldUsePowWithExponentNegativeNumbers()
+2022-01-27 09:53:25,809 INFO c.e.c.CalculatorTest [main] 0.0625
+2022-01-27 09:53:25,810 INFO c.e.e.TestReporterExtensions [main] 
+finishing testCalculatorTest/shouldUsePowWithExponentNegativeNumbers() 
+2022-01-27 09:53:25,836 INFO c.e.e.TestReporterExtensions [main] 
+ starting testCalculatorTest/[1] 2, 0
+2022-01-27 09:53:25,853 INFO c.e.e.TestReporterExtensions [main] 
+finishing testCalculatorTest/[1] 2, 0 
+2022-01-27 09:53:25,859 INFO c.e.e.TestReporterExtensions [main] 
+ starting testCalculatorTest/[2] 0, 2
+2022-01-27 09:53:25,859 INFO c.e.e.TestReporterExtensions [main] 
+finishing testCalculatorTest/[2] 0, 2 
+2022-01-27 09:53:25,861 INFO c.e.e.TestReporterExtensions [main] 
+ starting testCalculatorTest/shouldMultiplyWithNegativeNumbers()
+2022-01-27 09:53:25,862 INFO c.e.c.CalculatorTest [main] 8
+2022-01-27 09:53:25,862 INFO c.e.e.TestReporterExtensions [main] 
+finishing testCalculatorTest/shouldMultiplyWithNegativeNumbers() 
+2022-01-27 09:53:25,863 INFO c.e.e.TestReporterExtensions [main] 
+ starting testCalculatorTest/shouldFactorialWith0()
+2022-01-27 09:53:25,864 INFO c.e.c.CalculatorTest [main] 1.0
+2022-01-27 09:53:25,864 INFO c.e.e.TestReporterExtensions [main] 
+finishing testCalculatorTest/shouldFactorialWith0() 
+2022-01-27 09:53:25,865 INFO c.e.e.TestReporterExtensions [main] 
+ starting testCalculatorTest/shouldAddNegativeNumbers()
+2022-01-27 09:53:25,865 INFO c.e.e.TestReporterExtensions [main] 
+finishing testCalculatorTest/shouldAddNegativeNumbers() 
+2022-01-27 10:21:31,778 INFO c.e.e.TestReporterExtensions [main] 
+ starting testCalculatorTest/shouldMultiplyWithNegativeNumbers()
+2022-01-27 10:21:31,786 INFO c.e.e.TestReporterExtensions [main] 
+finishing testCalculatorTest/shouldMultiplyWithNegativeNumbers() 
+2022-01-27 10:21:53,191 INFO c.e.e.TestReporterExtensions [main] 
+ starting testCalculatorTest/shouldMultiplyWithNegativeNumbers()
+2022-01-27 10:21:53,198 INFO c.e.e.TestReporterExtensions [main] 
+finishing testCalculatorTest/shouldMultiplyWithNegativeNumbers() 
+2022-01-27 10:22:04,751 INFO c.e.e.TestReporterExtensions [main] 
+ starting testCalculatorTest/shouldMultiplyWithNegativeNumbers()
+2022-01-27 10:22:04,757 INFO c.e.e.TestReporterExtensions [main] 
+finishing testCalculatorTest/shouldMultiplyWithNegativeNumbers() 
+2022-01-27 10:22:36,062 INFO c.e.e.TestReporterExtensions [main] 
+ starting testCalculatorTest/shouldAddNegativeNumbers()
+2022-01-27 10:22:36,068 INFO c.e.e.TestReporterExtensions [main] 
+finishing testCalculatorTest/shouldAddNegativeNumbers() 
+2022-01-27 10:24:51,591 INFO c.e.e.TestReporterExtensions [main] 
+ starting testCalculatorTest/shouldAddNegativeNumbers()
+2022-01-27 10:24:51,601 INFO c.e.e.TestReporterExtensions [main] 
+finishing testCalculatorTest/shouldAddNegativeNumbers() 
+2022-01-27 10:25:05,519 INFO c.e.e.TestReporterExtensions [main] 
+ starting testCalculatorTest/shouldAddNegativeNumbers()
+2022-01-27 10:25:05,528 INFO c.e.e.TestReporterExtensions [main] 
+finishing testCalculatorTest/shouldAddNegativeNumbers() 
+2022-01-27 11:06:57,462 INFO c.e.e.TestReporterExtensions [main] 
+ starting testCalculatorTest/shouldAddBigNumbers()
+2022-01-27 11:06:57,468 INFO c.e.e.TestReporterExtensions [main] 
+finishing testCalculatorTest/shouldAddBigNumbers() 
+2022-01-27 11:09:06,892 INFO c.e.e.TestReporterExtensions [main] 
+ starting testCalculatorTest/shouldAddBigNumbers()
+2022-01-27 11:09:06,902 INFO c.e.e.TestReporterExtensions [main] 
+finishing testCalculatorTest/shouldAddBigNumbers() 
