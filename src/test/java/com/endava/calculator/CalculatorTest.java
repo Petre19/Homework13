@@ -5,6 +5,7 @@ import com.endava.calculator.basic.BasicOperations;
 import com.endava.calculator.expert.Expert;
 import com.endava.calculator.expert.ExpertOperations;
 import com.endava.extensions.TestReporterExtensions;
+import com.google.protobuf.NullValue;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.*;
@@ -12,6 +13,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.ArrayList;
@@ -19,8 +21,7 @@ import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 @ExtendWith(TestReporterExtensions.class)
@@ -43,7 +44,7 @@ public class CalculatorTest {
     public void setUpEachTest() {
         System.out.println("\nBefore Each");
         basic = new Basic();
-        expertOperations=new Expert();
+        expertOperations = new Expert();
     }
 
     @AfterEach
@@ -54,20 +55,20 @@ public class CalculatorTest {
     @Tags({@Tag("smoke"), @Tag("ui")})
     @ParameterizedTest
     @MethodSource("numberProvider")
-    public void shouldAddNumberGivenOperand0(int a, int b) {
+    public void shouldAddNumberGivenOperand0(int a, int b, long expected) {
         //GIVEN
 
         //WHEN
         long result = basic.add(a, b);
         //THEN
-        System.out.println(result);
+        assertThat(result, is(expected));
 
     }
 
     public static List<Arguments> numberProvider() {
         List<Arguments> argumentsList = new ArrayList<>();
-        argumentsList.add(Arguments.of(2, 0));
-        argumentsList.add(Arguments.of(0, 2));
+        argumentsList.add(Arguments.of(2, 0, 2));
+        argumentsList.add(Arguments.of(0, 2, 2));
         return argumentsList;
     }
 
@@ -79,32 +80,37 @@ public class CalculatorTest {
         //WHEN
         Long result = basic.add(-2, -4);
         //THEN
-        assertEquals(-6L,result);
+        assertEquals(-6L, result);
         assertTrue(result.equals(-6L));
     }
 
     @Test
+    @DisplayName("test that adds a big number as : MAX INT ")
     public void shouldAddBigNumbers() {
-        //GIVEN
+        assertThrows(AssertionError.class,()-> {
+            //GIVEN
 
-        //WHEN
-        long result = basic.add(Integer.MAX_VALUE, 1);
-        //THEN
-       assertThat(result,is(Integer.MAX_VALUE+ 1L));
-       assertThat(result,greaterThan(0L));
-       assertThat(result,notNullValue());
+            //WHEN
+            long result = basic.add(Integer.MAX_VALUE, 1);
+
+            //THEN
+            assertThat(result, is(Integer.MAX_VALUE + 1L));
+            assertThat(result, lessThan(0L));
+            assertThat(result, notNullValue());
+        });
 
     }
 
     @ParameterizedTest
+    @CsvSource({"1,2,3,6","2,4,5,11"})
     @CsvFileSource(resources = "numberSource.csv")
-    public void shouldAddMoreThan2Operands(int a1, int a2, int a3) {
+    public void shouldAddMoreThan2Operands(int a1, int a2, int a3, Long expected) {
         //GIVEN
 
         //WHEN
         long result = basic.add(a1, a2, a3);
         //THEN
-        System.out.println(result);
+        assertThat(result,is(expected));
     }
 
     @Test
@@ -112,9 +118,11 @@ public class CalculatorTest {
         //GIVEN
 
         //WHEN
-        long result = basic.add();
+        Long result = basic.add();
         //THEN
-        System.out.println(result);
+       assertThat(result,is(equalTo(0L)));
+        assertThat(result,is(notNullValue()));
+        assertThat(result,greaterThanOrEqualTo(0L));
     }
 
     @Test
@@ -122,9 +130,10 @@ public class CalculatorTest {
         //GIVEN
 
         //WHEN
-        long result = basic.add(167);
+        long result = basic.add(167L);
         //THEN
-        System.out.println(result);
+        assertThat(result,is(equalTo(167L)));
+        assertThat(result,is(notNullValue()));
     }
     //MULTIPLY
 
@@ -137,8 +146,8 @@ public class CalculatorTest {
         //WHEN
         long result = basic.multiply(-2, -4);
         //THEN
-        assertEquals(8L,result);
-       // assertTrue();
+        assertEquals(8L, result);
+        assertEquals(8L, is(greaterThanOrEqualTo(8L)));
     }
 
     @Test
@@ -146,20 +155,20 @@ public class CalculatorTest {
         //GIVEN
 
         //WHEN
-        long result = basic.multiply(0, 12);
+        double result = basic.multiply(0.0, 12.1);
         //THEN
-        LOGGER.info(result);
+        assertThat(result,lessThanOrEqualTo (0.1));
     }
 
     @ParameterizedTest
-    @CsvFileSource(resources = "numberSource.csv")
-    public void shouldMultiplyMoreThan2Operands(int a1, int a2, int a3) {
+    @CsvFileSource(resources = "numberSource2.csv")
+    public void shouldMultiplyMoreThan2Operands(int a1, int a2, int a3, Long exp) {
         //GIVEN
 
         //WHEN
-        long result = basic.multiply(a1, a2, a3);
+        Long result = basic.multiply(a1, a2, a3);
         //THEN
-        LOGGER.info(result);
+        assertThat(result,is(exp));
     }
 
     @Test
@@ -169,7 +178,7 @@ public class CalculatorTest {
         //WHEN
         long result = basic.multiply();
         //THEN
-        LOGGER.info(result);
+        assertThat(result,is(1L));
     }
 
     @Test
@@ -179,7 +188,7 @@ public class CalculatorTest {
         //WHEN
         long result = basic.multiply(2);
         //THEN
-        LOGGER.info(result);
+        assertThat(result,is(2L));
     }
 
     @Test
@@ -187,10 +196,11 @@ public class CalculatorTest {
         //GIVEN
 
         //WHEN
-        long result = basic.multiply(Integer.MAX_VALUE, 1);
+        Long result = basic.multiply(Integer.MAX_VALUE, 1);
         //THEN
-        LOGGER.info(result);
+        assertThat(result,greaterThanOrEqualTo(0L));
     }
+
     //POW
     @Tag("smoke")
     @Test
@@ -200,7 +210,8 @@ public class CalculatorTest {
         //WHEN
         double result = expertOperations.pow(2, -4);
         //THEN
-        LOGGER.info(result);
+        assertThat(result,is(greaterThanOrEqualTo(0.000001)));
+        assertThat(result,is(lessThanOrEqualTo(1.0)));
     }
 
     @Test
@@ -210,7 +221,7 @@ public class CalculatorTest {
         //WHEN
         double result = expertOperations.pow(2, 0);
         //THEN
-        LOGGER.info(result);
+        assertThat(result,is(greaterThanOrEqualTo(1.0)));
     }
 
     @Test
@@ -218,10 +229,12 @@ public class CalculatorTest {
         //GIVEN
 
         //WHEN
-        double result = expertOperations.pow(0,2);
+        double result = expertOperations.pow(0, 2);
         //THEN
-        LOGGER.info(result);
+        assertThat(result,anything());
+        assertThat(result,is(lessThan(0.1)));
     }
+
     //FACTORIAL
     @Tag("smoke")
     @Test
@@ -231,7 +244,7 @@ public class CalculatorTest {
         //WHEN
         double result = expertOperations.factorial(0);
         //THEN
-        LOGGER.info(result);
+        assertThat(result,is(equalTo(0)));
     }
 
     @Test
@@ -243,6 +256,7 @@ public class CalculatorTest {
         //THEN
         LOGGER.info(result);
     }
+
     @Test
     public void shouldFactorialWithPositive() {
         //GIVEN
@@ -250,6 +264,6 @@ public class CalculatorTest {
         //WHEN
         double result = expertOperations.factorial(2);
         //THEN
-        LOGGER.info(result);
+        assertThat(result,is(greaterThanOrEqualTo(1.0)));
     }
 }

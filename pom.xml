@@ -80,6 +80,12 @@
             <artifactId>hamcrest</artifactId>
             <version>2.2</version>
         </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.22.0</version>
+            <scope>test</scope>
+        </dependency>
 
 
     </dependencies>
@@ -118,7 +124,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
-                    <groups>smoke,api</groups>
+                    <!--<groups>smoke,api</groups>-->
                         <skipTests>false</skipTests>
                         <testFailureIgnore>true</testFailureIgnore>
                    <!----> <excludedGroups>integration, regression</excludedGroups>

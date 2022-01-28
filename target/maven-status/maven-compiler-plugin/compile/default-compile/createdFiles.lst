@@ -4,6 +4,7 @@ com\endava\apache\Log4jExample.class
 com\endava\extensions\TestReporterExtensions.class
 com\endava\apache\DBConnection.class
 com\endava\google\Payment.class
+com\endava\matchers\InLastFiveMinutes.class
 com\endava\calculator\basic\Basic.class
 com\endava\apache\FileReadWithCommonIO.class
 com\endava\calculator\expert\Expert.class

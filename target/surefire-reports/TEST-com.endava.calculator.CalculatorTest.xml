@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.endava.calculator.CalculatorTest" time="0.094" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.endava.calculator.CalculatorTest" time="0.177" tests="25" errors="1" skipped="0" failures="3">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\sourceCode\mavenCalc\target\test-classes;C:\sourceCode\mavenCalc\target\classes;C:\Users\PDiaconescu\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\PDiaconescu\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\PDiaconescu\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.1\log4j-core-2.17.1.jar;C:\Users\PDiaconescu\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.1\log4j-api-2.17.1.jar;C:\Users\PDiaconescu\.m2\repository\com\google\code\gson\gson\2.8.9\gson-2.8.9.jar;C:\Users\PDiaconescu\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.1\jackson-databind-2.13.1.jar;C:\Users\PDiaconescu\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.1\jackson-annotations-2.13.1.jar;C:\Users\PDiaconescu\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.1\jackson-core-2.13.1.jar;C:\Users\PDiaconescu\.m2\repository\commons-dbutils\commons-dbutils\1.7\commons-dbutils-1.7.jar;C:\Users\PDiaconescu\.m2\repository\mysql\mysql-connector-java\8.0.28\mysql-connector-java-8.0.28.jar;C:\Users\PDiaconescu\.m2\repository\com\google\protobuf\protobuf-java\3.11.4\protobuf-java-3.11.4.jar;C:\Users\PDiaconescu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;C:\Users\PDiaconescu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PDiaconescu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\PDiaconescu\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\PDiaconescu\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;"/>
+    <property name="java.class.path" value="C:\sourceCode\mavenCalc\target\test-classes;C:\sourceCode\mavenCalc\target\classes;C:\Users\PDiaconescu\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\PDiaconescu\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\PDiaconescu\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.1\log4j-core-2.17.1.jar;C:\Users\PDiaconescu\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.1\log4j-api-2.17.1.jar;C:\Users\PDiaconescu\.m2\repository\com\google\code\gson\gson\2.8.9\gson-2.8.9.jar;C:\Users\PDiaconescu\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.1\jackson-databind-2.13.1.jar;C:\Users\PDiaconescu\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.1\jackson-annotations-2.13.1.jar;C:\Users\PDiaconescu\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.1\jackson-core-2.13.1.jar;C:\Users\PDiaconescu\.m2\repository\commons-dbutils\commons-dbutils\1.7\commons-dbutils-1.7.jar;C:\Users\PDiaconescu\.m2\repository\mysql\mysql-connector-java\8.0.28\mysql-connector-java-8.0.28.jar;C:\Users\PDiaconescu\.m2\repository\com\google\protobuf\protobuf-java\3.11.4\protobuf-java-3.11.4.jar;C:\Users\PDiaconescu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;C:\Users\PDiaconescu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PDiaconescu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\PDiaconescu\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\PDiaconescu\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\PDiaconescu\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\PDiaconescu\.m2\repository\org\assertj\assertj-core\3.22.0\assertj-core-3.22.0.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Users\PDiaconescu\.jdks\openjdk-17.0.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\PDiaconescu\AppData\Local\Temp\surefire5856422293708929285\surefirebooter18080863707879936220.jar C:\Users\PDiaconescu\AppData\Local\Temp\surefire5856422293708929285 2022-01-27T09-53-24_472-jvmRun1 surefire6092072086114260574tmp surefire_09870068781390845916tmp"/>
+    <property name="sun.java.command" value="C:\Users\PDiaconescu\AppData\Local\Temp\surefire17418406285058385116\surefirebooter5956526248532686342.jar C:\Users\PDiaconescu\AppData\Local\Temp\surefire17418406285058385116 2022-01-28T09-13-54_544-jvmRun1 surefire15590944681663320544tmp surefire_09018480312414624530tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\sourceCode\mavenCalc\target\test-classes;C:\sourceCode\mavenCalc\target\classes;C:\Users\PDiaconescu\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\PDiaconescu\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\PDiaconescu\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.1\log4j-core-2.17.1.jar;C:\Users\PDiaconescu\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.1\log4j-api-2.17.1.jar;C:\Users\PDiaconescu\.m2\repository\com\google\code\gson\gson\2.8.9\gson-2.8.9.jar;C:\Users\PDiaconescu\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.1\jackson-databind-2.13.1.jar;C:\Users\PDiaconescu\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.1\jackson-annotations-2.13.1.jar;C:\Users\PDiaconescu\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.1\jackson-core-2.13.1.jar;C:\Users\PDiaconescu\.m2\repository\commons-dbutils\commons-dbutils\1.7\commons-dbutils-1.7.jar;C:\Users\PDiaconescu\.m2\repository\mysql\mysql-connector-java\8.0.28\mysql-connector-java-8.0.28.jar;C:\Users\PDiaconescu\.m2\repository\com\google\protobuf\protobuf-java\3.11.4\protobuf-java-3.11.4.jar;C:\Users\PDiaconescu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;C:\Users\PDiaconescu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PDiaconescu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\PDiaconescu\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\PDiaconescu\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;"/>
+    <property name="surefire.test.class.path" value="C:\sourceCode\mavenCalc\target\test-classes;C:\sourceCode\mavenCalc\target\classes;C:\Users\PDiaconescu\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\PDiaconescu\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\PDiaconescu\.m2\repository\org\apache\logging\log4j\log4j-core\2.17.1\log4j-core-2.17.1.jar;C:\Users\PDiaconescu\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.1\log4j-api-2.17.1.jar;C:\Users\PDiaconescu\.m2\repository\com\google\code\gson\gson\2.8.9\gson-2.8.9.jar;C:\Users\PDiaconescu\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.1\jackson-databind-2.13.1.jar;C:\Users\PDiaconescu\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.1\jackson-annotations-2.13.1.jar;C:\Users\PDiaconescu\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.1\jackson-core-2.13.1.jar;C:\Users\PDiaconescu\.m2\repository\commons-dbutils\commons-dbutils\1.7\commons-dbutils-1.7.jar;C:\Users\PDiaconescu\.m2\repository\mysql\mysql-connector-java\8.0.28\mysql-connector-java-8.0.28.jar;C:\Users\PDiaconescu\.m2\repository\com\google\protobuf\protobuf-java\3.11.4\protobuf-java-3.11.4.jar;C:\Users\PDiaconescu\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;C:\Users\PDiaconescu\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\PDiaconescu\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\PDiaconescu\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\PDiaconescu\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\PDiaconescu\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\PDiaconescu\.m2\repository\org\assertj\assertj-core\3.22.0\assertj-core-3.22.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\PDiaconescu"/>
     <property name="user.language" value="en"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\PDiaconescu\AppData\Local\Temp\surefire5856422293708929285\surefirebooter18080863707879936220.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\PDiaconescu\AppData\Local\Temp\surefire17418406285058385116\surefirebooter5956526248532686342.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.1+12-39"/>
@@ -40,7 +40,6 @@
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="Cp1252"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="skipTests" value="true"/>
     <property name="localRepository" value="C:\Users\PDiaconescu\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\PDIACO~1\AppData\Local\Temp\"/>
@@ -58,63 +57,252 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="shouldUsePowWithExponentNegativeNumbers" classname="com.endava.calculator.CalculatorTest" time="0.022">
+  <testcase name="shouldUsePowWith0Base" classname="com.endava.calculator.CalculatorTest" time="0.021">
     <system-out><![CDATA[Before All
 
 Before Each
-09:53:25.805 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+09:13:55.573 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/shouldUsePowWith0Base()
+09:13:55.578 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/shouldUsePowWith0Base() 
+After Each
+
+]]></system-out>
+  </testcase>
+  <testcase name="shouldMultiplyNoOperands" classname="com.endava.calculator.CalculatorTest" time="0.001">
+    <system-out><![CDATA[
+Before Each
+09:13:55.584 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/shouldMultiplyNoOperands()
+09:13:55.585 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/shouldMultiplyNoOperands() 
+After Each
+
+]]></system-out>
+  </testcase>
+  <testcase name="shouldUsePowWithExponentNegativeNumbers" classname="com.endava.calculator.CalculatorTest" time="0.001">
+    <system-out><![CDATA[
+Before Each
+09:13:55.586 [main] INFO  com.endava.extensions.TestReporterExtensions - 
  starting testCalculatorTest/shouldUsePowWithExponentNegativeNumbers()
-09:53:25.809 [main] INFO  com.endava.calculator.CalculatorTest - 0.0625
-09:53:25.810 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+09:13:55.587 [main] INFO  com.endava.extensions.TestReporterExtensions - 
 finishing testCalculatorTest/shouldUsePowWithExponentNegativeNumbers() 
 After Each
 
 ]]></system-out>
   </testcase>
-  <testcase name="shouldAddNumberGivenOperand0(int, int)[1]" classname="com.endava.calculator.CalculatorTest" time="0.019">
+  <testcase name="shouldAddBigNumbers" classname="com.endava.calculator.CalculatorTest" time="0.008">
     <system-out><![CDATA[
 Before Each
-09:53:25.836 [main] INFO  com.endava.extensions.TestReporterExtensions - 
- starting testCalculatorTest/[1] 2, 0
-2
-09:53:25.853 [main] INFO  com.endava.extensions.TestReporterExtensions - 
-finishing testCalculatorTest/[1] 2, 0 
+09:13:55.588 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/test that adds a big number as : MAX INT
+09:13:55.596 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/test that adds a big number as : MAX INT 
 After Each
 
 ]]></system-out>
   </testcase>
-  <testcase name="shouldAddNumberGivenOperand0(int, int)[2]" classname="com.endava.calculator.CalculatorTest" time="0.001">
+  <testcase name="shouldAddNumberGivenOperand0(int, int, long)[1]" classname="com.endava.calculator.CalculatorTest" time="0.012">
     <system-out><![CDATA[
 Before Each
-09:53:25.859 [main] INFO  com.endava.extensions.TestReporterExtensions - 
- starting testCalculatorTest/[2] 0, 2
-2
-09:53:25.859 [main] INFO  com.endava.extensions.TestReporterExtensions - 
-finishing testCalculatorTest/[2] 0, 2 
+09:13:55.610 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/[1] 2, 0, 2
+09:13:55.621 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/[1] 2, 0, 2 
 After Each
 
 ]]></system-out>
   </testcase>
-  <testcase name="shouldMultiplyWithNegativeNumbers" classname="com.endava.calculator.CalculatorTest" time="0.001">
+  <testcase name="shouldAddNumberGivenOperand0(int, int, long)[2]" classname="com.endava.calculator.CalculatorTest" time="0.001">
     <system-out><![CDATA[
 Before Each
-09:53:25.861 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+09:13:55.625 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/[2] 0, 2, 2
+09:13:55.625 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/[2] 0, 2, 2 
+After Each
+
+]]></system-out>
+  </testcase>
+  <testcase name="shouldMultiplyMoreThan2Operands(int, int, int, Long)[1]" classname="com.endava.calculator.CalculatorTest" time="0.001">
+    <system-out><![CDATA[
+Before Each
+09:13:55.691 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/[1] 1, 2, 3, 6
+09:13:55.692 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/[1] 1, 2, 3, 6 
+After Each
+
+]]></system-out>
+  </testcase>
+  <testcase name="shouldMultiplyMoreThan2Operands(int, int, int, Long)[2]" classname="com.endava.calculator.CalculatorTest" time="0.002">
+    <failure type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+
+Expected: is <30L>
+     but: was <40L>
+	at com.endava.calculator.CalculatorTest.shouldMultiplyMoreThan2Operands(CalculatorTest.java:171)
+]]></failure>
+    <system-out><![CDATA[
+Before Each
+09:13:55.694 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/[2] 2, 4, 5, 30
+09:13:55.695 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/[2] 2, 4, 5, 30 
+After Each
+
+]]></system-out>
+  </testcase>
+  <testcase name="shouldMultiplyMoreThan2Operands(int, int, int, Long)[3]" classname="com.endava.calculator.CalculatorTest" time="0.001">
+    <system-out><![CDATA[
+Before Each
+09:13:55.697 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/[3] 2, 3, 5, 30
+09:13:55.697 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/[3] 2, 3, 5, 30 
+After Each
+
+]]></system-out>
+  </testcase>
+  <testcase name="shouldAddNoOperands" classname="com.endava.calculator.CalculatorTest" time="0.001">
+    <system-out><![CDATA[
+Before Each
+09:13:55.698 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/shouldAddNoOperands()
+09:13:55.699 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/shouldAddNoOperands() 
+After Each
+
+]]></system-out>
+  </testcase>
+  <testcase name="shouldMultiplyWithNegativeNumbers" classname="com.endava.calculator.CalculatorTest" time="0.003">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <8> but was: <is a value equal to or greater than <8L>>
+	at com.endava.calculator.CalculatorTest.shouldMultiplyWithNegativeNumbers(CalculatorTest.java:150)
+]]></failure>
+    <system-out><![CDATA[
+Before Each
+09:13:55.700 [main] INFO  com.endava.extensions.TestReporterExtensions - 
  starting testCalculatorTest/shouldMultiplyWithNegativeNumbers()
-09:53:25.862 [main] INFO  com.endava.calculator.CalculatorTest - 8
-09:53:25.862 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+09:13:55.703 [main] INFO  com.endava.extensions.TestReporterExtensions - 
 finishing testCalculatorTest/shouldMultiplyWithNegativeNumbers() 
 After Each
 
 ]]></system-out>
   </testcase>
-  <testcase name="shouldFactorialWith0" classname="com.endava.calculator.CalculatorTest" time="0.001">
+  <testcase name="shouldFactorialWith0" classname="com.endava.calculator.CalculatorTest" time="0">
+    <failure type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
+
+Expected: is <0>
+     but: was <1.0>
+	at com.endava.calculator.CalculatorTest.shouldFactorialWith0(CalculatorTest.java:247)
+]]></failure>
     <system-out><![CDATA[
 Before Each
-09:53:25.863 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+09:13:55.704 [main] INFO  com.endava.extensions.TestReporterExtensions - 
  starting testCalculatorTest/shouldFactorialWith0()
-09:53:25.864 [main] INFO  com.endava.calculator.CalculatorTest - 1.0
-09:53:25.864 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+09:13:55.704 [main] INFO  com.endava.extensions.TestReporterExtensions - 
 finishing testCalculatorTest/shouldFactorialWith0() 
+After Each
+
+]]></system-out>
+  </testcase>
+  <testcase name="shouldFactorialWithPositive" classname="com.endava.calculator.CalculatorTest" time="0">
+    <system-out><![CDATA[
+Before Each
+09:13:55.705 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/shouldFactorialWithPositive()
+09:13:55.705 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/shouldFactorialWithPositive() 
+After Each
+
+]]></system-out>
+  </testcase>
+  <testcase name="shouldFactorialWithNegative" classname="com.endava.calculator.CalculatorTest" time="0">
+    <error type="java.lang.IllegalArgumentException"><![CDATA[java.lang.IllegalArgumentException: You can not calculate factorial from negative number
+	at com.endava.calculator.CalculatorTest.shouldFactorialWithNegative(CalculatorTest.java:255)
+]]></error>
+    <system-out><![CDATA[
+Before Each
+09:13:55.706 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/shouldFactorialWithNegative()
+09:13:55.706 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/shouldFactorialWithNegative() 
+After Each
+
+]]></system-out>
+  </testcase>
+  <testcase name="shouldAddMoreThan2Operands(int, int, int, Long)[1]" classname="com.endava.calculator.CalculatorTest" time="0.001">
+    <system-out><![CDATA[
+Before Each
+09:13:55.709 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/[1] 1, 2, 3, 6
+09:13:55.710 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/[1] 1, 2, 3, 6 
+After Each
+
+]]></system-out>
+  </testcase>
+  <testcase name="shouldAddMoreThan2Operands(int, int, int, Long)[2]" classname="com.endava.calculator.CalculatorTest" time="0.002">
+    <system-out><![CDATA[
+Before Each
+09:13:55.711 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/[2] 2, 4, 5, 11
+09:13:55.711 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/[2] 2, 4, 5, 11 
+After Each
+
+]]></system-out>
+  </testcase>
+  <testcase name="shouldAddMoreThan2Operands(int, int, int, Long)[3]" classname="com.endava.calculator.CalculatorTest" time="0.001">
+    <system-out><![CDATA[
+Before Each
+09:13:55.715 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/[3] 1, 2, 3, 6
+09:13:55.715 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/[3] 1, 2, 3, 6 
+After Each
+
+]]></system-out>
+  </testcase>
+  <testcase name="shouldAddMoreThan2Operands(int, int, int, Long)[4]" classname="com.endava.calculator.CalculatorTest" time="0">
+    <system-out><![CDATA[
+Before Each
+09:13:55.716 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/[4] 2, 4, 5, 11
+09:13:55.716 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/[4] 2, 4, 5, 11 
+After Each
+
+]]></system-out>
+  </testcase>
+  <testcase name="shouldAddMoreThan2Operands(int, int, int, Long)[5]" classname="com.endava.calculator.CalculatorTest" time="0.001">
+    <system-out><![CDATA[
+Before Each
+09:13:55.717 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/[5] 6, 7, 8, 21
+09:13:55.717 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/[5] 6, 7, 8, 21 
+After Each
+
+]]></system-out>
+  </testcase>
+  <testcase name="shouldMultiply1Operands" classname="com.endava.calculator.CalculatorTest" time="0">
+    <system-out><![CDATA[
+Before Each
+09:13:55.718 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/shouldMultiply1Operands()
+09:13:55.718 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/shouldMultiply1Operands() 
+After Each
+
+]]></system-out>
+  </testcase>
+  <testcase name="shouldAdd1Operands" classname="com.endava.calculator.CalculatorTest" time="0">
+    <system-out><![CDATA[
+Before Each
+09:13:55.719 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/shouldAdd1Operands()
+09:13:55.719 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/shouldAdd1Operands() 
 After Each
 
 ]]></system-out>
@@ -122,11 +310,43 @@ After Each
   <testcase name="shouldAddNegativeNumbers" classname="com.endava.calculator.CalculatorTest" time="0.001">
     <system-out><![CDATA[
 Before Each
-09:53:25.865 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+09:13:55.720 [main] INFO  com.endava.extensions.TestReporterExtensions - 
  starting testCalculatorTest/shouldAddNegativeNumbers()
--6
-09:53:25.865 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+09:13:55.720 [main] INFO  com.endava.extensions.TestReporterExtensions - 
 finishing testCalculatorTest/shouldAddNegativeNumbers() 
+After Each
+
+]]></system-out>
+  </testcase>
+  <testcase name="shouldUsePowWith0Exponent" classname="com.endava.calculator.CalculatorTest" time="0">
+    <system-out><![CDATA[
+Before Each
+09:13:55.721 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/shouldUsePowWith0Exponent()
+09:13:55.721 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/shouldUsePowWith0Exponent() 
+After Each
+
+]]></system-out>
+  </testcase>
+  <testcase name="shouldMultiplyWithGiven0Number" classname="com.endava.calculator.CalculatorTest" time="0.001">
+    <system-out><![CDATA[
+Before Each
+09:13:55.722 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/shouldMultiplyWithGiven0Number()
+09:13:55.722 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/shouldMultiplyWithGiven0Number() 
+After Each
+
+]]></system-out>
+  </testcase>
+  <testcase name="shouldMultiplyBigNumbers" classname="com.endava.calculator.CalculatorTest" time="0.001">
+    <system-out><![CDATA[
+Before Each
+09:13:55.722 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+ starting testCalculatorTest/shouldMultiplyBigNumbers()
+09:13:55.722 [main] INFO  com.endava.extensions.TestReporterExtensions - 
+finishing testCalculatorTest/shouldMultiplyBigNumbers() 
 After Each
 
 ]]></system-out>

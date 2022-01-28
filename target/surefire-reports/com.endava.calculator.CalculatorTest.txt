@@ -1,4 +1,26 @@
 -------------------------------------------------------------------------------
 Test set: com.endava.calculator.CalculatorTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.094 s - in com.endava.calculator.CalculatorTest
+Tests run: 25, Failures: 3, Errors: 1, Skipped: 0, Time elapsed: 0.177 s <<< FAILURE! - in com.endava.calculator.CalculatorTest
+com.endava.calculator.CalculatorTest.shouldMultiplyMoreThan2Operands(int, int, int, Long)[2]  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <30L>
+     but: was <40L>
+	at com.endava.calculator.CalculatorTest.shouldMultiplyMoreThan2Operands(CalculatorTest.java:171)
+
+com.endava.calculator.CalculatorTest.shouldMultiplyWithNegativeNumbers  Time elapsed: 0.003 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <8> but was: <is a value equal to or greater than <8L>>
+	at com.endava.calculator.CalculatorTest.shouldMultiplyWithNegativeNumbers(CalculatorTest.java:150)
+
+com.endava.calculator.CalculatorTest.shouldFactorialWith0  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <0>
+     but: was <1.0>
+	at com.endava.calculator.CalculatorTest.shouldFactorialWith0(CalculatorTest.java:247)
+
+com.endava.calculator.CalculatorTest.shouldFactorialWithNegative  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: You can not calculate factorial from negative number
+	at com.endava.calculator.CalculatorTest.shouldFactorialWithNegative(CalculatorTest.java:255)
+
